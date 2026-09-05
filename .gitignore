@@ -1,0 +1,18 @@
+# Python virtual environment
+venv/
+
+# Python cache and compiled files
+__pycache__/
+*.pyc
+
+# Local environment configuration
+.env
+
+# Pytest and Playwright test artifacts
+.pytest_cache/
+test-results/
+playwright-report/
+reports/
+
+# Visual Studio Code workspace settings
+.vscode/
