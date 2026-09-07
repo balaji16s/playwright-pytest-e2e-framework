@@ -16,7 +16,14 @@ class LandingPage:
         
         # Fixed: Avoid strict mode violation by scoping to the navbar list container first
         self.nav_test_cases = page.locator(".navbar-nav").get_by_role("link", name="Test Cases")
+        self.nav_delete_account = page.locator(".navbar-nav").get_by_role("link", name="Delete Account")
+
         
         self.nav_api_testing = page.locator(".navbar-nav").get_by_role("link", name="API Testing")
         self.nav_video_tutorials = page.get_by_role("link", name="Video Tutorials")
         self.nav_contact_us = page.get_by_role("link", name="Contact us")
+        self.nav_Logged_in_as_username = page.locator(".navbar-nav").get_by_text(re.compile("Logged in as", re.I))
+
+    def navigate_to_login_page(self):
+            self.nav_login.click()
+
