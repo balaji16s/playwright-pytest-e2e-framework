@@ -75,3 +75,5 @@ def test_register_user(preCondition, env_settings):
     expect(deleteaccount.delete_account_header).to_be_visible(timeout=15000)
     expect(deleteaccount.delete_account_message).to_be_visible()
     deleteaccount.delete_account_continue_button.click()
+
+    expect(landing.nav_login).to_be_visible(timeout=10_000)

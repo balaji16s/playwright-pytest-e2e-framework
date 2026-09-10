@@ -13,6 +13,7 @@ class LandingPage:
         
         # Fixed: Using re.compile without the slash to bypass Playwright's internal parser bug
         self.nav_login = page.get_by_role("link", name=re.compile("Signup", re.I))
+        self.nav_logout = page.locator(".navbar-nav").get_by_role("link", name="Logout")
         
         # Fixed: Avoid strict mode violation by scoping to the navbar list container first
         self.nav_test_cases = page.locator(".navbar-nav").get_by_role("link", name="Test Cases")
