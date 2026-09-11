@@ -87,4 +87,5 @@ def test_login_correct_credentials(preCondition, env_settings):
     expect(deleteaccount.delete_account_message).to_be_visible()
     deleteaccount.delete_account_continue_button.click()
 
+    expect(landing.nav_logout).not_to_be_visible()
     expect(landing.nav_login).to_be_visible(timeout=10_000)
